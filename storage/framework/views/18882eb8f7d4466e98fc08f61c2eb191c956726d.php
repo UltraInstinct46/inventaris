@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PERPUSTAKAAN</title>
+    <title>INVENTARIS</title>
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('/css/app.css')); ?>">
 </head>
 <body>

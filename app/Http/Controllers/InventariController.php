@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use PDF;
 use App\Inventari;
 use App\Jeni;
 use App\Ruang;
@@ -51,7 +51,6 @@ class InventariController extends Controller
             'jumlah' => 'required',
             'id_jenis' => 'required',
             'id_ruang' => 'required',
-            'kode_inventaris' => 'required',
             'id_petugas' => 'required',
         ]);
 
@@ -69,7 +68,9 @@ class InventariController extends Controller
      */
     public function show(Inventari $inventari)
     {
-        return view('inventaris.show',compact('inventari'));
+        $inventaris = Inventari::all();
+        $pdf = PDF::loadView('inventaris.show', compact('inventari','inventaris'))->setPaper('A4', 'landscape');
+        return $pdf->stream('inventaris-pdf');
     }
 
     /**
@@ -102,7 +103,6 @@ class InventariController extends Controller
             'jumlah' => 'required',
             'id_jenis' => 'required',
             'id_ruang' => 'required',
-            'kode_inventaris' => 'required',
             'id_petugas' => 'required',
         ]);
 

@@ -30,12 +30,6 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Status Peminjaman:</strong>
-                    <input type="text" name="status_peminjaman" class="form-control" value="{{ $peminjaman->status_peminjaman }}">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
                     <strong>Id Pegawai:</strong>
                     <select name="id_pegawai" class="form-control">
                         @foreach ($pegawai as $data)
@@ -43,9 +37,18 @@
                          @if($peminjaman->id_pegawai == $data->id_pegawai)
                          selected
                          @endif>
-                         {{$data->id_pegawai}}
+                         {{$data->nama_pegawai}}
                        </option>
                         @endforeach
+                        </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Status Peminjaman:</strong>
+                    <select name="status_peminjaman" class="form-control">
+                        <option value="belum dikembalikan"  @if($peminjaman->status_peminjaman == "belum dikembalikan") selected @endif>belum dikembalikan</option>
+                        <option value="sudah dikembalikan"  @if($peminjaman->status_peminjaman == "sudah dikembalikan") selected @endif>sudah dikembalikan</option>
                         </select>
                 </div>
             </div>

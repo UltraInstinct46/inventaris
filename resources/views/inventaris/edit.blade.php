@@ -61,7 +61,7 @@
                          @if($inventari->id_jenis == $data->id_jenis)
                          selected
                          @endif>
-                         {{$data->id_jenis}}
+                         {{$data->nama_jenis}}
                        </option>
                         @endforeach
                         </select>
@@ -72,11 +72,11 @@
                     <strong>Id Ruang:</strong>
                     <select name="id_ruang" class="form-control">
                         @foreach ($ruang as $data)
-                        <option value="{{ $data->id_jenis }}"
-                         @if($inventari->id_ruang == $data->id_ruang)
+                        <option value="{{ $data->id }}"
+                         @if($inventari->id_ruang == $data->id)
                          selected
                          @endif>
-                         {{$data->id_ruang}}
+                         {{$data->nama_ruang}}
                        </option>
                         @endforeach
                         </select>
@@ -87,11 +87,11 @@
                     <strong>Id Petugas:</strong>
                     <select name="id_petugas" class="form-control">
                         @foreach ($user as $data)
-                        <option value="{{ $data->id_petugas }}"
-                         @if($inventari->id_petugas == $data->id_petugas)
+                        <option value="{{ $data->id }}"
+                         @if($inventari->id_petugas == $data->id)
                          selected
                          @endif>
-                         {{$data->id_petugas}}
+                         {{$data->name}}
                        </option>
                         @endforeach
                         </select>

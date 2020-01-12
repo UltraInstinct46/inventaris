@@ -27,18 +27,27 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Id Pegawai:</strong>
+                <select name="id_pegawai" class="form-control">
+                    <?php $__currentLoopData = $pegawai; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <option value="<?php echo e($data->id_pegawai); ?>">
+                     <?php echo e($data->nama_pegawai); ?>
+
+                   </option>
+                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Status Peminjaman:</strong>
                 <select name="status_peminjaman" class="form-control">
                     <option value="belum dikembalikan"  >belum dikembalikan</option>
                     <option value="sudah dikembalikan"  >sudah dikembalikan</option>
                     </select>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <input type="text" name="id_pegawai" class="form-control" placeholder="id_pegawai">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>

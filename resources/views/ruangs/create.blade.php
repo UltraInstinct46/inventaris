@@ -22,24 +22,21 @@
         </ul>
     </div>
 @endif
-
-<form action="{{ route('ruangs.store') }}" method="POST" class="text-center border border-black p-5">
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: #000000}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;}.bootstrap-iso .form-control:focus { border-color: #000000;  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);} .asteriskField{color: red;}</style>
+<form action="{{ route('ruangs.store') }}" method="POST" class="text-center border border-secondary p-5 ">
     @csrf
 
-     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
+     <div class="row ">
+        <div class="col-xs-12 col-sm-12 col-md-12 ">
             <div class="form-group">
-                <input type="text" name="nama_ruang" class="form-control" placeholder="nama_ruang">
+                <strong>Nama Ruang:</strong>
+                <input type="text" name="nama_ruang" class="form-control bg-light" placeholder="nama_ruang">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <input type="text" name="kode_ruang" class="form-control" placeholder="Kode Ruang">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <textarea type="text" name="keterangan" class="form-control " placeholder="Keterangan"></textarea>
+                <strong>Keterangan:</strong>
+                <textarea type="text" name="keterangan" class="form-control bg-light" placeholder="Keterangan"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

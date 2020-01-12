@@ -1,4 +1,4 @@
-@extends('layout.navbar')
+@extends('layout.sidebar')
 
 @section('content')
 <!DOCTYPE html>

@@ -16,7 +16,7 @@
         </div>
     <?php endif; ?>
 
-    <table class="table">
+    <table class="table table table-striped">
         <thead class="thead-dark">
         <tr>
             <th>No</th>

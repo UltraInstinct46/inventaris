@@ -59,7 +59,7 @@
                          <?php if($inventari->id_jenis == $data->id_jenis): ?>
                          selected
                          <?php endif; ?>>
-                         <?php echo e($data->id_jenis); ?>
+                         <?php echo e($data->nama_jenis); ?>
 
                        </option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -71,11 +71,11 @@
                     <strong>Id Ruang:</strong>
                     <select name="id_ruang" class="form-control">
                         <?php $__currentLoopData = $ruang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <option value="<?php echo e($data->id_jenis); ?>"
-                         <?php if($inventari->id_ruang == $data->id_ruang): ?>
+                        <option value="<?php echo e($data->id); ?>"
+                         <?php if($inventari->id_ruang == $data->id): ?>
                          selected
                          <?php endif; ?>>
-                         <?php echo e($data->id_ruang); ?>
+                         <?php echo e($data->nama_ruang); ?>
 
                        </option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -87,11 +87,11 @@
                     <strong>Id Petugas:</strong>
                     <select name="id_petugas" class="form-control">
                         <?php $__currentLoopData = $user; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                        <option value="<?php echo e($data->id_petugas); ?>"
-                         <?php if($inventari->id_petugas == $data->id_petugas): ?>
+                        <option value="<?php echo e($data->id); ?>"
+                         <?php if($inventari->id_petugas == $data->id): ?>
                          selected
                          <?php endif; ?>>
-                         <?php echo e($data->id_petugas); ?>
+                         <?php echo e($data->name); ?>
 
                        </option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

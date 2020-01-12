@@ -80,7 +80,7 @@ class PegawaiController extends Controller
     {
         $request->validate([
             'nama_pegawai' => 'required',
-            'nip' => 'required|nummeric',
+            'nip' => 'required|numeric',
             'alamat' => 'required',
         ]);
 

@@ -29,17 +29,20 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Nama Jenis:</strong>
                 <input type="text" name="nama_jenis" class="form-control" placeholder="nama_jenis">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Kode Jenis:</strong>
                 <input type="text" name="kode_jenis" class="form-control" placeholder="Kode Jenis">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
-                <textarea type="text" name="keterangan" class="form-control " placeholder="Keterangan"></textarea>
+                <strong>Keterangan:</strong>
+                <textarea type="text" name="keterangan" class="form-control" placeholder="Keterangan"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

@@ -27,16 +27,19 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Nama Pegawai:</strong>
                 <input type="text" name="nama_pegawai" class="form-control" placeholder="nama_pegawai">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Nip:</strong>
                 <input type="text" name="nip" class="form-control" placeholder="nip">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Alamat:</strong>
                 <textarea type="text" name="alamat" class="form-control " placeholder="alamat"></textarea>
             </div>
         </div>

@@ -9,20 +9,18 @@
             </div>
         </div>
     </div>
-
     <?php if($message = Session::get('success')): ?>
         <div class="alert alert-success">
             <p><?php echo e($message); ?></p>
         </div>
     <?php endif; ?>
 
-    <table class="table">
+    <table class="table table-striped">
         <thead class="thead-dark">
         <tr>
             <th>No</th>
             <th>ID Ruang</th>
             <th>Nama Ruang</th>
-            <th>Kode Ruang</th>
             <th>Keterangan</th>
             <th width="280px">Action</th>
         </tr>
@@ -32,12 +30,11 @@
             <td><?php echo e(++$i); ?></td>
             <td><?php echo e($ruang->id_ruang); ?></td>
             <td><?php echo e($ruang->nama_ruang); ?></td>
-            <td><?php echo e($ruang->kode_ruang); ?></td>
             <td><?php echo e($ruang->keterangan); ?></td>
             <td>
                 <form action="<?php echo e(route('ruangs.destroy',$ruang->id)); ?>" method="POST">
 
-                    <a class="btn btn-primary" href="<?php echo e(route('ruangs.edit',$ruang->id)); ?>">Edit</a>
+                    <a class="btn btn-primary " href="<?php echo e(route('ruangs.edit',$ruang->id)); ?>">Edit</a>
 
                     <?php echo csrf_field(); ?>
                     <?php echo method_field('DELETE'); ?>

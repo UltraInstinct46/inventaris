@@ -1,34 +1,38 @@
-@extends('rayons.layout')
-@section('content')
-    <div class="row">
-        <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2> Show Rayon</h2>
-            </div>
-            <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('rayons.index') }}"> Back</a>
-            </div>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raport</title>
+    <link rel="stylesheet" type="text/css" href="{{ asset('/css/pdf.css') }}">
+</head>
+<body>
 
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Kode Rayon:</strong>
-                {{ $rayon->kd_rayon }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Rayon:</strong>
-                {{ $rayon->rayon }}
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Pembimbing:</strong>
-                {{ $rayon->pembimbing }}
-            </div>
-        </div>
-    </div>
-@endsection
+                <center><h2> Data Peminjaman </h2></center>
+
+
+    <table class="table table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th>No</th>
+            <th>ID Peminjaman</th>
+            <th>Tanggal Peminjaman</th>
+            <th>Tanggal Kembali</th>
+            <th>Status Peminjaman</th>
+            <th>Id Pegawai</th>
+        </tr>
+        </thead>
+        <?php $i = 0?>
+        @foreach ($peminjamans as $peminjaman)
+        <tr>
+            <td>{{ ++$i }}</td>
+            <td>{{ $peminjaman->id_peminjaman }}</td>
+            <td>{{ $peminjaman->tanggal_pinjam }}</td>
+            <td>{{ $peminjaman->tanggal_kembali }}</td>
+            <td>{{ $peminjaman->status_peminjaman }}</td>
+            <td>{{ $peminjaman->id_pegawai }}</td>
+        </form>
+    </td>
+</tr>
+@endforeach
+</table>
+</body>
+</html>

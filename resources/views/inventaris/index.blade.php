@@ -18,7 +18,7 @@
         </div>
     @endif
 
-    <table class="table">
+    <table class="table table table-striped">
         <thead class="thead-dark">
         <tr>
             <th>No</th>
@@ -48,9 +48,9 @@
             <td>{{ $inventari->id_petugas }}</td>
             <td>
                 <form action="{{ route('inventaris.destroy',$inventari->id) }}" method="POST">
-
+                    <a class="btn btn-info"href="{{ route('inventaris.show',$inventari->id) }}" target="_blank">Print</a>
                     <a class="btn btn-primary" href="{{ route('inventaris.edit',$inventari->id) }}">Edit</a>
-
+                    
                     @csrf
                     @method('DELETE')
 

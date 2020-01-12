@@ -16,7 +16,7 @@
         </div>
     <?php endif; ?>
 
-    <table class="table">
+    <table class="table table table-striped">
         <thead class="thead-dark">
         <tr>
             <th>No</th>
@@ -46,9 +46,9 @@
             <td><?php echo e($inventari->id_petugas); ?></td>
             <td>
                 <form action="<?php echo e(route('inventaris.destroy',$inventari->id)); ?>" method="POST">
-
+                    <a class="btn btn-info"href="<?php echo e(route('inventaris.show',$inventari->id)); ?>" target="_blank">Print</a>
                     <a class="btn btn-primary" href="<?php echo e(route('inventaris.edit',$inventari->id)); ?>">Edit</a>
-
+                    
                     <?php echo csrf_field(); ?>
                     <?php echo method_field('DELETE'); ?>
 

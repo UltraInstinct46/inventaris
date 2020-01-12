@@ -29,19 +29,13 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Nama Ruang:</strong>
-                    <input type="text" name="nama_ruang" class="form-control" value="<?php echo e($ruang->nama_ruang); ?>">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>Kode ruang:</strong>
-                    <input type="text" name="kode_ruang" class="form-control" placeholder="Rombel" value="<?php echo e($ruang->kode_ruang); ?>">
+                    <input type="text" name="nama_ruang" class="form-control bg-light" value="<?php echo e($ruang->nama_ruang); ?>">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Keterangan:</strong>
-                    <textarea type="text" name="keterangan" class="form-control" placeholder="Rombel" value="<?php echo e($ruang->keterangan); ?>"><?php echo e($ruang->keterangan); ?></textarea>
+                    <textarea type="text" name="keterangan" class="form-control bg-light" placeholder="Rombel" value="<?php echo e($ruang->keterangan); ?>"><?php echo e($ruang->keterangan); ?></textarea>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">

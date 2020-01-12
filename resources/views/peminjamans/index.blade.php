@@ -18,7 +18,7 @@
         </div>
     @endif
 
-    <table class="table">
+    <table class="table table table-striped">
         <thead class="thead-dark">
         <tr>
             <th>No</th>
@@ -40,7 +40,7 @@
             <td>{{ $peminjaman->id_pegawai }}</td>
             <td>
                 <form action="{{ route('peminjamans.destroy',$peminjaman->id) }}" method="POST">
-
+                    <a class="btn btn-info"href="{{ route('peminjamans.show',$peminjaman->id) }}" target="_blank">Print</a>
                     <a class="btn btn-primary" href="{{ route('peminjamans.edit',$peminjaman->id) }}">Edit</a>
 
                     @csrf

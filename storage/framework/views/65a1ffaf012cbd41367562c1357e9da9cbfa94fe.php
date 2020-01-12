@@ -28,12 +28,6 @@
          <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Status Peminjaman:</strong>
-                    <input type="text" name="status_peminjaman" class="form-control" value="<?php echo e($peminjaman->status_peminjaman); ?>">
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
                     <strong>Id Pegawai:</strong>
                     <select name="id_pegawai" class="form-control">
                         <?php $__currentLoopData = $pegawai; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -41,10 +35,19 @@
                          <?php if($peminjaman->id_pegawai == $data->id_pegawai): ?>
                          selected
                          <?php endif; ?>>
-                         <?php echo e($data->id_pegawai); ?>
+                         <?php echo e($data->nama_pegawai); ?>
 
                        </option>
                         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </select>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Status Peminjaman:</strong>
+                    <select name="status_peminjaman" class="form-control">
+                        <option value="belum dikembalikan"  <?php if($peminjaman->status_peminjaman == "belum dikembalikan"): ?> selected <?php endif; ?>>belum dikembalikan</option>
+                        <option value="sudah dikembalikan"  <?php if($peminjaman->status_peminjaman == "sudah dikembalikan"): ?> selected <?php endif; ?>>sudah dikembalikan</option>
                         </select>
                 </div>
             </div>

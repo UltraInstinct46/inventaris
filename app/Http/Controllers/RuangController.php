@@ -40,7 +40,6 @@ class RuangController extends Controller
     {
         $request->validate([
             'nama_ruang' => 'required',
-            'kode_ruang' => 'required',
             'keterangan' => 'required',
         ]);
 
@@ -83,7 +82,6 @@ class RuangController extends Controller
     {
         $request->validate([
             'nama_ruang' => 'required',
-            'kode_ruang' => 'required',
             'keterangan' => 'required',
         ]);
 

@@ -27,6 +27,7 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Id Inventaris:</strong>
                 <select name="id_inventaris" class="form-control">
                     <?php $__currentLoopData = $inventari; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <option value="<?php echo e($data->id_inventaris); ?>"  ><?php echo e($data->id_inventaris); ?></option>
@@ -36,6 +37,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Jumlah:</strong>
                 <input type="number" name="jumlah" class="form-control" placeholder="Jumlah">
             </div>
         </div>

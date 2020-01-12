@@ -27,47 +27,54 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Nama:</strong>
                 <input type="text" name="nama" class="form-control" placeholder="nama">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Kondisi:</strong>
                 <input type="text" name="kondisi" class="form-control" placeholder="Kondisi">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Keterangan:</strong>
                 <textarea type="text" name="keterangan" class="form-control " placeholder="Keterangan"></textarea>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Jumlah:</strong>
                 <input type="number" name="jumlah" class="form-control" placeholder="Jumlah">
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Id Jenis:</strong>
                 <select name="id_jenis" class="form-control">
                     <?php $__currentLoopData = $jeni; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <option value="<?php echo e($data->id_jenis); ?>"  ><?php echo e($data->id_jenis); ?></option>
+                    <option value="<?php echo e($data->id_jenis); ?>"  ><?php echo e($data->nama_jenis); ?></option>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Id Ruang:</strong>
                 <select name="id_ruang" class="form-control">
                     <?php $__currentLoopData = $ruang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <option value="<?php echo e($data->id_ruang); ?>"  ><?php echo e($data->id_ruang); ?></option>
+                    <option value="<?php echo e($data->id_ruang); ?>"  ><?php echo e($data->nama_ruang); ?></option>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Id Petugas:</strong>
                 <select name="id_petugas" class="form-control">
                     <?php $__currentLoopData = $user; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <option value="<?php echo e($data->id); ?>"  ><?php echo e($data->id); ?></option>
+                    <option value="<?php echo e($data->id); ?>"  ><?php echo e($data->name); ?></option>
                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                     </select>
             </div>

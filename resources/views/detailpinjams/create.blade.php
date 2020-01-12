@@ -29,6 +29,7 @@
      <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Id Inventaris:</strong>
                 <select name="id_inventaris" class="form-control">
                     @foreach ($inventari as $data)
                     <option value="{{ $data->id_inventaris }}"  >{{$data->id_inventaris}}</option>
@@ -38,6 +39,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
+                <strong>Jumlah:</strong>
                 <input type="number" name="jumlah" class="form-control" placeholder="Jumlah">
             </div>
         </div>

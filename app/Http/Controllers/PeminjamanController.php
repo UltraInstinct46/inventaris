@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Peminjaman;
 use App\Pegawai;
+use PDF;
 use Illuminate\Http\Request;
 
 class PeminjamanController extends Controller
@@ -28,7 +29,8 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
-        return view('peminjamans.create');
+        $pegawai = Pegawai::all();
+        return view('peminjamans.create',compact('pegawai'));
     }
 
     /**
@@ -58,7 +60,9 @@ class PeminjamanController extends Controller
      */
     public function show(Peminjaman $peminjaman)
     {
-        //
+        $peminjamans = Peminjaman::all();
+        $pdf = PDF::loadView('peminjamans.show', compact('peminjaman','peminjamans'))->setPaper('A4', 'landscape');
+        return $pdf->stream('Peminjaman-pdf');
     }
 
     /**

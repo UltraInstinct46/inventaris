@@ -43,7 +43,11 @@ class RuangController extends Controller
             'keterangan' => 'required',
         ]);
 
-        Ruang::create($request->all());
+        try{
+            Ruang::create($request->all());
+        } catch(\Exception $e) {
+            return redirect()->route('ruangs.index')->with('error', $e->getMessage());
+        }
 
         return redirect()->route('ruangs.index')
                         ->with('success','Ruang created successfully.');
@@ -85,7 +89,11 @@ class RuangController extends Controller
             'keterangan' => 'required',
         ]);
 
-        $ruang->update($request->all());
+        try{
+            $ruang->update($request->all());
+        } catch(\Exception $e) {
+            return redirect()->route('ruangs.index')->with('error', $e->getMessage());
+        }
 
         return redirect()->route('ruangs.index')
                         ->with('success','Rayon updated successfully');

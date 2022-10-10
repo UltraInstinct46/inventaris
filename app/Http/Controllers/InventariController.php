@@ -53,8 +53,13 @@ class InventariController extends Controller
             'id_ruang' => 'required',
             'id_petugas' => 'required',
         ]);
-
-        Inventari::create($request->all());
+        
+        try {
+            Inventari::create($request->all());
+        } catch (\Exception $e) {
+            \Log::error($e);
+            return "Something went wrong";
+        }
 
         return redirect()->route('inventaris.index')
                         ->with('success','Inventaris created successfully.');
